@@ -1,11 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bike Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/69b72dcb0c.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </head>
+
 <body>
-    
+  <section id="landing">
+    <nav>
+      <div class="nav__container">
+        <img class="logo" src="./assets/BikeLogo.png" alt="">
+        <ul class="nav__links">
+          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="#" class="nav__link">Contact</a></li>
+          <li><a href="#" class="nav__link nav__link--primary">Bikes</a></li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+            </li>
+            <li class="menu__list">
+              <a href="#features" class="menu__link" onclick="closeMenu()">Bikes</a>
+            </li>
+            <li class="menu__list">
+              <a class="menu__link no-cursor" onclick="closeMenu()">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+
+      <div class="header__container">
+        <div class="header__description">
+          <h1>America's most awarded online bike shop platform</h1>
+          <h2>Find your dream bike with <span class="green">Bike Shop</span></h2>
+          <a href="#features">
+            <button class="btn">Browse bikes</button>
+          </a>
+        </div>
+        <figure class="header__img--wrapper">
+          <img src="./assets/undraw_ride_a_bicycle.svg" alt="">
+        </figure>
+      </div>
+    </header>
+  </section>
+
+  <main>
+    <section id="highlights">
+      <div class="container">
+        <div class="row">
+          <h2 class="section__title">
+            Why choose <span class="green">Bike Shop</span>
+          </h2>
+          <div class="highlight__wrapper">
+            <div class="highlight">
+              <div class="highlight__img">
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h3 class="highlight__subtitle">
+                High Quality
+              </h3>
+              <p class="highlight__para">
+                Our bikes are sourced from highly-respected manufacturers.
+              </p>
+            </div>
+            <div class="highlight">
+              <div class="highlight__img">
+                <i class="fa-solid fa-bicycle"></i>
+              </div>
+              <h3 class="highlight__subtitle">
+                A Bike for Everyone
+              </h3>
+              <p class="highlight__para">
+                Our wide selection allows you to pick the bike made for you.
+              </p>
+            </div>
+            <div class="highlight">
+              <div class="highlight__img">
+                <i class="fas fa-tags"></i>
+              </div>
+              <h3 class="highlight__subtitle">
+                Affordable
+              </h3>
+              <p class="highlight__para">
+                There is no middle-man so our bikes can be sold for unreasonably low.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="row">
+          <h2 class="section__title">
+            Top Selling <span class="green">Bikes</span>
+          </h2>
+          <div class="bikes">
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/Rockhopper.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                Rockhopper Sport
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$750.00</span> $700.00
+              </div>
+            </div>
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/Stumpjumper.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                S-Works Stumpjumper EVO
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$11,500.00</span> $6,499.99
+              </div>
+            </div>
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/Chisel.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                Chisel Hardtail
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$1,800.00</span> $1,349.99
+              </div>
+            </div>
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/Fuse.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                Fuse 27.5
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$1,500.00</span> $949.99
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recent">
+      <div class="container">
+        <div class="row">
+          <h2 class="section__title">
+            New <span class="green">bikes</span>
+          </h2>
+          <div class="bikes">
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/worldcupltd.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                S-Works Epic World Cup LTD
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$14,000.00</span> $12,999.99
+              </div>
+            </div>
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/status.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                STATUS 2 170
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$3,500.00</span> $3,000.00
+              </div>
+            </div>
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/p1trail.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                P.1 Trail
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$1,000.00</span> $899.99
+              </div>
+            </div>
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/p2trail.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                P.2 Trail
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$1,500.00</span> $1,399.99
+              </div>
+            </div>
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/status2.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                STATUS 2 170 DH
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$4,500.00</span> $4,399.99
+              </div>
+            </div>
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/epic8.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                Epic 8 EVO Expert
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$7,000.00</span> $6,000.00
+              </div>
+            </div>
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/turbo.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                Turbo Levo Comp Alloy
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$7,000.00</span> $6,000.00
+              </div>
+            </div>
+            <div class="bike">
+              <figure class="bike__img--wrapper">
+                <img class="bike__img" src="./assets/demorace.webp" alt="">
+              </figure>
+              <div class="bike__title">
+                Demo Race
+              </div>
+              <div class="bike__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="bike__price">
+                <span class="bike__price--normal">$7,100.00</span> $7,000.00
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="explore">
+      <div class="container">
+        <div class="row row__column">
+          <h2>Explore more <span class="green">Bikes</span></h2>
+          <a href="#features">
+            <button class="btn">Browse bikes</button>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row row__column">
+        <a href="#">
+          <figure class="footer__logo">
+            <img src="./assets/BikeLogo.png" class="footer__logo--img" alt="">
+          </figure>
+        </a>
+        <div class="footer__list">
+          <a href="#" class="footer__link">Home</a>
+          <a class="footer__link no-cursor">About</a>
+          <a href="#features" class="footer__link">Bikes</a>
+          <a class="footer__link no-cursor">Contact</a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2024 Bike Shop</div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
