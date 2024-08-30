@@ -444,3 +444,66 @@ footer {
     margin-bottom: 24px;
   }
 }
+
+/*
+
+BIKES.HTML-----------------------------------------------------------------
+
+*/
+
+html, body {
+  height: 100%;
+}
+
+#bikes__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #07d40017;
+}
+
+#bikes__main {
+  flex: 1;
+}
+
+.bikes__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.bikes__header--title {
+  margin-bottom: 0;
+}
+
+.bikes__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  font-size: 60px;
+  color: #07D400;
+}
+
+.bikes__loading--spinner {
+  display: none !important;
+}
+
+.bikes__loading .bikes__loading--spinner {
+  display: block !important;
+}
+
+
+.fa-spinner {
+  animation: spin 600ms infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
