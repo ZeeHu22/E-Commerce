@@ -75,9 +75,9 @@ function priceHTML(originalPrice, salePrice) {
   )}</span> $${salePrice.toFixed(2)}`;
 }
 
-setTimeout(() => {
+window.onload = () => {
     renderBikes();
-})
+  };  
 
 function getBikes() {
   return new Promise((resolve) => {
